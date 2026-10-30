@@ -5,13 +5,13 @@ function adicionarNoCarrinho() {
     cy.get('.text-center a[href="/view_cart"]').click();
 };
 
-function visitarTelaDeCarrinho () {
-    cy.visit('/view_cart', {timeout: 20000});
+function visitarTelaDeCarrinho() {
+    cy.visit('/view_cart', { timeout: 20000 });
     cy.url().should('include', '/view_cart');
 };
 
 function fazerProcessoDeCheckout() {
-        cy.contains('#do_action a', 'Proceed To Checkout').click();
+    cy.contains('#do_action a', 'Proceed To Checkout').click();
 };
 
 function fazerLoginAposAdicionarNoCarrinho() {
@@ -19,7 +19,10 @@ function fazerLoginAposAdicionarNoCarrinho() {
 };
 
 function fazerPedido() {
+
     cy.get('a[href="/payment"]').click();
+    cy.url().should('include', '/payment');
+    cy.get('[data-qa="name-on-card"]').should('be.visible');
 };
 
 module.exports = {

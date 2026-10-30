@@ -113,7 +113,7 @@ describe('Automation Exercise', () => {
         carrinho.adicionarNoCarrinho();
         carrinho.fazerProcessoDeCheckout();
         carrinho.fazerLoginAposAdicionarNoCarrinho();
-        login.fazerLogin(dadosCadastro.nome, dadosUsuarioLogin.valido.email);
+        login.fazerLogin(dadosUsuarioLogin.valido.email, dadosUsuarioLogin.valido.senha);
         carrinho.visitarTelaDeCarrinho();
         carrinho.fazerProcessoDeCheckout();
         carrinho.fazerPedido();
@@ -129,12 +129,11 @@ describe('Automation Exercise', () => {
         cy.contains('.container p', 'Congratulations! Your order has been confirmed!').should('be.visible');
     });
 
-    it('ct 16 - deve fazer um pedido antes de fazer login', () => {
+    it.only('ct 16 - deve fazer um pedido antes de fazer login', () => {
         login.visitarTelaDeLogin();
-        login.fazerLogin(dadosCadastro.nome, dadosUsuarioLogin.valido.email);
+        login.fazerLogin(dadosUsuarioLogin.valido.email, dadosUsuarioLogin.valido.senha);
         produtos.visitarTelaDeProduto();
         produtos.pesquisar('Sleeveless Unicorn Patch Gown - Pink');
-        produtos.selecionarPrimeiroProduto();
         carrinho.adicionarNoCarrinho();
         carrinho.fazerProcessoDeCheckout();
         carrinho.fazerPedido();
