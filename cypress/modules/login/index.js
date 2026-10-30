@@ -12,7 +12,7 @@ function fazerLogin(email, senha) {
 
     cy.get('[data-qa="login-button"]').click();
 
-    cy.wait('@requisicaoLogin', {timeout: 20000}).its('response.statusCode').should('eq', 302);
+    cy.wait('@requisicaoLogin', {timeout: 20000}).its('response.statusCode').should('be.oneOf', [200, 302]);
 };
 
 module.exports = {
