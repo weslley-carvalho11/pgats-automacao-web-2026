@@ -129,7 +129,7 @@ describe('Automation Exercise', () => {
         cy.contains('.container p', 'Congratulations! Your order has been confirmed!').should('be.visible');
     });
 
-    it.only('ct 16 - deve fazer um pedido antes de fazer login', () => {
+    it('ct 16 - deve fazer um pedido antes de fazer login', () => {
         login.visitarTelaDeLogin();
         login.fazerLogin(dadosUsuarioLogin.valido.email, dadosUsuarioLogin.valido.senha);
         produtos.visitarTelaDeProduto();
