@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-10-28T23:34:07.195Z",
+    "end": "2026-10-28T23:35:07.755Z",
+    "duration": 60560,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f8bf29b2-0322-4390-aa0a-539a08d84223",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-exercise.cy.js",
+      "file": "cypress\\e2e\\automation-exercise.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7447602a-7b69-4021-a195-41d6f31679ca",
+          "title": "Automation Exercise",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "ct 9 - deve pesquisar o produto",
+              "fullTitle": "Automation Exercise ct 9 - deve pesquisar o produto",
+              "timedOut": null,
+              "duration": 60419,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "produtos.visitarTelaDeProduto();\nprodutos.pesquisar('Sleeveless Unicorn Patch Gown - Pink');\nprodutos.selecionarPrimeiroProduto();\ncy.get('div[class=\"product-information\"] h2').should('have.text', 'Sleeveless Unicorn Patch Gown - Pink');\ncy.get('div[class=\"product-information\"] p').should('include.text', 'Category: Kids > ');\ncy.get('div[class=\"product-information\"] span').should('include.text', 'Rs. 1050');\ncy.get('div[class=\"product-information\"] p').should('include.text', ' In Stock');\ncy.get('div[class=\"product-information\"] p').should('include.text', ' New');\ncy.get('div[class=\"product-information\"] p').should('include.text', 'Allen Solly Junior');",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://automationexercise.com/__cypress/runner/cypress_runner.js:130096:64)\n    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:131082:16)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://automationexercise.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://automationexercise.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://automationexercise.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://automationexercise.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://automationexercise.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://automationexercise.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://automationexercise.com/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Object.visitarTelaDeProduto (webpack://pgats-automacao-web-2026/./cypress/modules/produtos/index.js:4:7)\n    at Context.eval (webpack://pgats-automacao-web-2026/./cypress/e2e/automation-exercise.cy.js:81:17)",
+                "diff": null
+              },
+              "uuid": "f37bf966-aa57-43b0-ab74-48080cf541d1",
+              "parentUUID": "7447602a-7b69-4021-a195-41d6f31679ca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f37bf966-aa57-43b0-ab74-48080cf541d1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 60419,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

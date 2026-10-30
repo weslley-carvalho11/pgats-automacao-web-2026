@@ -1,0 +1,16 @@
+{
+  "nome": "Testevaldo",
+  "genero": "Mr",
+  "senha": "123@teste",
+  "diaNascimento": 1,
+  "mesNascimento": "January",
+  "anoNascimento": "2000",
+  "sobrenome": "silva",
+  "empresa": "Testevaldo Company",
+  "rua": "Rua Dos Bobos 3581",
+  "pais": "United States",
+  "estado": "California",
+  "cidade": "Los Angeles",
+  "zipCode": "12345",
+  "numeroTelefone": 99926091333
+}
